@@ -1,14 +1,14 @@
-package com.emreOytun.hrms.business.concretes;
+package com.emreOytun.hrms.business.concretes.userManagers;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.emreOytun.hrms.business.abstracts.CandidateService;
+import com.emreOytun.hrms.business.abstracts.userServices.CandidateService;
 import com.emreOytun.hrms.core.utilities.results.DataResult;
 import com.emreOytun.hrms.core.utilities.results.SuccessDataResult;
-import com.emreOytun.hrms.dataAccess.abstracts.CandidateDao;
+import com.emreOytun.hrms.dataAccess.abstracts.userDaos.CandidateDao;
 import com.emreOytun.hrms.entities.concretes.users.Candidate;
 
 @Service

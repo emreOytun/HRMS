@@ -1,4 +1,4 @@
-package com.emreOytun.hrms.dataAccess.abstracts;
+package com.emreOytun.hrms.dataAccess.abstracts.verificationCodeDaos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

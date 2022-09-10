@@ -1,4 +1,4 @@
-package com.emreOytun.hrms.business.abstracts;
+package com.emreOytun.hrms.business.abstracts.userServices;
 
 import java.util.List;
 
