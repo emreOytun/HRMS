@@ -1,11 +1,13 @@
 package com.emreOytun.hrms.business.concretes;
 
-import java.util.List;
+import java.util.List; 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.emreOytun.hrms.business.abstracts.JobPositionService;
+import com.emreOytun.hrms.core.utilities.results.DataResult;
+import com.emreOytun.hrms.core.utilities.results.SuccessDataResult;
 import com.emreOytun.hrms.dataAccess.abstracts.JobPositionDao;
 import com.emreOytun.hrms.entities.concretes.JobPosition;
 
@@ -21,8 +23,8 @@ public class JobPositionManager implements JobPositionService {
 	}
 
 	@Override
-	public List<JobPosition> getAll() {
-		return this.positionDao.findAll();
+	public DataResult<List<JobPosition>> getAll() {
+		return new SuccessDataResult<List<JobPosition>>(this.positionDao.findAll());
 	}
 	
 }
