@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.emreOytun.hrms.business.abstracts.userServices.CandidateService;
 import com.emreOytun.hrms.core.utilities.results.DataResult;
+import com.emreOytun.hrms.core.utilities.results.Result;
 import com.emreOytun.hrms.core.utilities.results.SuccessDataResult;
+import com.emreOytun.hrms.core.utilities.results.SuccessResult;
 import com.emreOytun.hrms.dataAccess.abstracts.userDaos.CandidateDao;
 import com.emreOytun.hrms.entities.concretes.users.Candidate;
 
@@ -23,8 +25,9 @@ public class CandidateManager implements CandidateService {
 	}
 
 	@Override
-	public void add(Candidate candidate) {
+	public Result add(Candidate candidate) {
 		candidateDao.save(candidate);
+		return new SuccessResult("Candidate has been added to the db !");
 	}
 
 	@Override

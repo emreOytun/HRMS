@@ -1,13 +1,9 @@
 package com.emreOytun.hrms.entities.concretes.users;
 
-import javax.persistence.Column;
+import javax.persistence.Column; 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
-import com.emreOytun.hrms.entities.concretes.verificationCodes.VerificationCodeCandidate;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,9 +34,5 @@ public class Candidate extends User {
 	
 	@Column(name = "birth_year")
 	private int birthYear;
-	
-	@OneToOne(mappedBy = "candidate")
-	@JsonBackReference
-	private VerificationCodeCandidate verificationCode;
 	
 }

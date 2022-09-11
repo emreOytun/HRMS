@@ -1,13 +1,12 @@
 package com.emreOytun.hrms.entities.concretes.users;
 
-import javax.persistence.Column; 
+import javax.persistence.Column;  
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import com.emreOytun.hrms.entities.concretes.employeeConfirms.EmployeeConfirmEmployer;
-import com.emreOytun.hrms.entities.concretes.verificationCodes.VerificationCodeEmployer;
+import com.emreOytun.hrms.entities.concretes.verificationCodes.EmployerVerificationCode;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
@@ -39,10 +38,6 @@ public class Employer extends User {
 	
 	@OneToOne(mappedBy = "employer")
 	@JsonBackReference
-	private VerificationCodeEmployer verificationCode;
-	
-	@OneToOne(mappedBy = "employer")	// !!
-	@JsonBackReference
-	private EmployeeConfirmEmployer employeeConfirm;
+	private EmployerVerificationCode verificationCode;
 	
 }

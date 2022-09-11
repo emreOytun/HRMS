@@ -8,4 +8,5 @@ import com.emreOytun.hrms.entities.concretes.users.Candidate;
 
 public interface CandidateDao extends JpaRepository<Candidate, Integer>{
 	List<Candidate> findByIdentityNumberEquals(String identityNumber);
+	List<Candidate> findByEmailEquals(String email);
 }

@@ -1,4 +1,4 @@
-package com.emreOytun.hrms.core.utilities.checkServices.abstracts;
+package com.emreOytun.hrms.business.abstracts.checkServices;
 
 import com.emreOytun.hrms.entities.concretes.users.Candidate;
 

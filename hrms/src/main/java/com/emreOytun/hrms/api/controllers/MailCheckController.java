@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.emreOytun.hrms.core.utilities.checkServices.abstracts.MailCheckService;
+import com.emreOytun.hrms.business.abstracts.checkServices.MailCheckService;
 import com.emreOytun.hrms.core.utilities.results.ErrorResult;
 import com.emreOytun.hrms.core.utilities.results.Result;
 import com.emreOytun.hrms.core.utilities.results.SuccessResult;

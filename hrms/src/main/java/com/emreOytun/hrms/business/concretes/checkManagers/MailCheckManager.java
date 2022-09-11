@@ -1,9 +1,9 @@
-package com.emreOytun.hrms.core.utilities.checkServices.concretes;
+package com.emreOytun.hrms.business.concretes.checkManagers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.emreOytun.hrms.core.utilities.checkServices.abstracts.MailCheckService;
+import com.emreOytun.hrms.business.abstracts.checkServices.MailCheckService;
 import com.emreOytun.hrms.dataAccess.abstracts.userDaos.UserDao;
 
 @Service
@@ -19,10 +19,10 @@ public class MailCheckManager implements MailCheckService{
 
 	@Override
 	public boolean isMailRegistered(String email) {
-		if(userDao.findByEmailEquals(email).size() != 0) {
-			return true;
+		if(userDao.findByEmailEquals(email).size() == 0) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 }
